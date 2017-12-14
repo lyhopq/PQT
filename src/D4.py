@@ -103,4 +103,4 @@ res = opt.minimize(rosen, x_0, method='BFGS',
 print('Result of minimizing Rosenbrock function via Broyden-Fletcher-Goldfarb-Shanno algorithm:', res)
 
 #%%
-#公式看不懂，先跳过
+#TODO: p50 公式看不懂，先跳过
