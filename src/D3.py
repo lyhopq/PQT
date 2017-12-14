@@ -106,4 +106,47 @@ print(loc)
 print(a[loc[0][0], loc[0][0]])
 
 #%%
-#p36
+a = np.random.rand(2,4)
+print('a:\n', a)
+print('transpose(a):\n', np.transpose(a))
+b = np.random.rand(2, 4)
+b = np.mat(b)
+print('b:\n', b)
+print('b.T:\n', b.T)
+
+#%%
+import numpy.linalg as nlg
+a = np.random.rand(2,2)
+a = np.mat(a)
+print('a:\n', a)
+ia = nlg.inv(a)
+print('inverse of a:\n', ia)
+print('a*inv(a):\n', a*ia)
+
+#%%
+a = np.random.rand(3,3)
+eig_value, eig_vector = nlg.eig(a)
+print('eigen value:\n', eig_value)
+print('eigen vector:\n', eig_vector)
+
+#%%
+a = np.array((1,2,3))
+b = np.array((2,3,4))
+print(np.column_stack((a,b)))
+
+#%%
+a = np.random.rand(2,2)
+b = np.random.rand(2,2)
+print('a:\n', a)
+print('b:\n', b)
+c = np.hstack([a, b])
+d = np.vstack([a, b])
+print('horizontal stacking a and b:\n', c)
+print('vertical stacking a and b:\n', d)
+
+#%%
+a = np.random.rand(2,2)
+a[0,1] = np.nan
+print(np.isnan(a))
+print(np.nan_to_num(a))
+
